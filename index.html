@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="150px" id="morocco" src="image1.webp" alt="morocco">
+            </li>
+            <li>
+                <img width="150px" id="aura" src="image2.webp" alt="aura">
+            </li>
+            <li>
+                <img width="150px" id="church" src="image3.webp" alt="church">
+            </li>
+            <li>
+                <img width="150px" id="valley" src="image4.webp" alt="valley">
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    });
+</script>
+
+</html>
